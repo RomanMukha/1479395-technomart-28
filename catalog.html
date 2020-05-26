@@ -10,7 +10,6 @@
     		<div>
 	    		<a href="">
 	    			<img src="img/logo-technomart.svg" width="108" height="18" alt="Техномарт">
-	    			<!-- <img src="img/bg-logo-header.png" alt="Техномарт бэкграунд"> -->
 	    		</a>
 	    		<div>
 	    			<img src="img/icon-search.svg" width="17" height="17" alt="Поиск">
@@ -77,10 +76,13 @@
     	<h1>
     		Перфораторы
     	</h1>
-    	<section>
+    	<form>
     		<h2>Фильтр:</h2>
     		<h3>Цена</h3>
-    		<!-- Ценовой фильтр -->
+    			<input type="range" name="price-range" min="0" max="3000" step="100" value="2000">
+    			<input type="text" name="min-price" value="0">
+    			<span> - </span>
+    			<input type="text" name="min-price" value="3000">
     		<h3>Прозводители:</h3>
     		<ul>
     			<li><label><input type="checkbox">Bosch</label></li>
@@ -88,18 +90,14 @@
     			<li><label><input type="checkbox">Makita</label></li>
     			<li><label><input type="checkbox">Dewalt</label></li>
     			<li><label><input type="checkbox">Hitachi</label></li>
-    			<!-- <img src="img/checkbox-off.svg" width="23" height="23" alt=" Не выбрано"> -->
-    			<!-- <img src="img/checkbox-on.svg" width="27" height="23" alt="Выбрано"> -->
     		</ul>
     		<h3>Питание:</h3>
     		<ul>
     			<li><label><input type="radio">Аккумуляторные</label></li>
     			<li><label><input type="radio">Сетевые</label></li>
-    			<!-- <img src="img/radio-on.svg" width="25" height="25" alt="Выбрано"> -->
-    			<!-- <img src="img/radio-off.svg" width="25" height="25" alt="Не выбрано"> -->
     		</ul>
     		<button>Показать</button>
-    	</section>
+    	</form>
     	<div>
     		<section>
 	    		<h2>Сортировка:</h2>
@@ -255,7 +253,6 @@
 			<div>
 				<a href="index.html">
 					<img src="img/logo-technomart.svg" width="138" height="23" alt="Техномарт">
-					<!-- <img src="img/bg-logo-footer.png" width="220" height="68" alt="Техномарт бэкграунд"> -->
 				</a>
 				<nav>
 					<ul>
