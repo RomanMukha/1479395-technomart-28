@@ -76,27 +76,31 @@
     	<h1>
     		Перфораторы
     	</h1>
-    	<form>
+    	<form action="https://echo.htmlacademy.ru/">
     		<h2>Фильтр:</h2>
     		<h3>Цена</h3>
-    			<input type="range" name="price-range" min="0" max="3000" step="100" value="2000">
+    		<div>
+    			<div><img src="img/filter-button.svg" width="20" height="22" alt="Цена от"></div>
+    			<div><img src="img/filter-button.svg" width="20" height="22" alt="Цена до"></div>
+    			<div><!-- ценовая полоска --></div>
+			</div>
     			<input type="text" name="min-price" value="0">
     			<span> - </span>
-    			<input type="text" name="min-price" value="3000">
+    			<input type="text" name="max-price" value="3000">
     		<h3>Прозводители:</h3>
     		<ul>
-    			<li><label><input type="checkbox">Bosch</label></li>
-    			<li><label><input type="checkbox">Интерскол</label></li>
-    			<li><label><input type="checkbox">Makita</label></li>
-    			<li><label><input type="checkbox">Dewalt</label></li>
-    			<li><label><input type="checkbox">Hitachi</label></li>
+    			<li><label><input type="checkbox" name="bosch">Bosch</label></li>
+    			<li><label><input type="checkbox" name="interskol">Интерскол</label></li>
+    			<li><label><input type="checkbox" name="makita">Makita</label></li>
+    			<li><label><input type="checkbox" name="dewalt">Dewalt</label></li>
+    			<li><label><input type="checkbox" name="hitachi">Hitachi</label></li>
     		</ul>
     		<h3>Питание:</h3>
     		<ul>
-    			<li><label><input type="radio">Аккумуляторные</label></li>
-    			<li><label><input type="radio">Сетевые</label></li>
+    			<li><label><input type="radio" name="power" value="rechargeable">Аккумуляторные</label></li>
+    			<li><label><input type="radio" name="power" value="wired">Сетевые</label></li>
     		</ul>
-    		<button>Показать</button>
+    		<button type="submit">Показать</button>
     	</form>
     	<div>
     		<section>
@@ -229,18 +233,6 @@
     			<li><a href="blank.html">Следующая</a></li>
     		</ul>
     	</div>
-    	<div>
-    		<img src="img/popup-border.png" width="620" height="7" alt="Рамка окна">
-    		<button><img src="img/icon-close.svg" width="21" height="21" alt="Закрыть"></button>
-    		<div>
-    			<img src="img/icon-mark.svg" width="66" height="66" alt="Успешно">
-				<p>Товар добавлен в корзину!</p>
-    		</div>
-    		<div>
-    			<a href="blank.html">Оформить заказ</a>
-    			<button>Продолжить покупки</button>
-    		</div>
-    	</div>
     	<section>
     		<h2>Пара слов о перфораторах</h2>
     		<p>
@@ -310,5 +302,16 @@
 			</p>
 		</div>
 	</footer>
+	<div>
+		<button><img src="img/icon-close.svg" width="21" height="21" alt="Закрыть"></button>
+		<div>
+			<img src="img/icon-mark.svg" width="66" height="66" alt="Успешно">
+			<p>Товар добавлен в корзину!</p>
+		</div>
+		<div>
+			<a href="blank.html">Оформить заказ</a>
+			<button>Продолжить покупки</button>
+		</div>
+	</div>
   </body>
 </html>
