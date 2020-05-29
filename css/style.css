@@ -1,0 +1,325 @@
+:root {
+	--basic-red: #EE3643;
+	--basic-green: #63A63E;
+	--basic-black: #000000;
+	--basic-dark: #32425C;
+	--basic-darker: #293449;
+	--basic-white: #ffffff;
+	--basic-grey: #C5C5C5;
+	
+	--text-yellow: #FFD180;
+	--text-grey: #A9A9A9;
+	
+	--index-cold: #F1F5F7;
+	--index-warm: #F9F5F0;
+	--catalog-cold: #F2F6F8;
+	--catalog-warm: #F7F3EC;
+
+	--card-yellow: #FFC047;
+	--card-blue: #3BBCE3;
+	--card-pink: #DC91D8;
+	--card-green: #8ED78F;
+}
+
+body {
+	min-width: 960px;
+	margin: 0;
+	padding: 0;
+	font-family: 'Cuprum', sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	color: var(--basic-black);
+	background-color: var(--basic-white);
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-height: 100%;
+	height: auto;
+}
+
+ul {
+	list-style: none;
+}
+
+header {
+	background-color: var(--index-cold);
+}
+
+h2 {
+	font-size: 30px;
+	line-height: 30px;
+}
+
+.main-navigation {
+	background-color: var(--basic-dark);
+	box-shadow: inset 0px -5px 0px #293449;
+	text-align: center;
+}
+
+.logo-navigation a,
+.main-navigation a {
+	color: var(--basic-white);
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.logo-navigation {
+	background-color: var(--basic-darker);
+}
+
+.logo {
+	background-color: var(--basic-red);
+	box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+}
+
+.search {
+	background-color: var(--basic-darker);
+	border: none;
+}
+
+.search::placeholder {
+	color: var(--basic-white);
+}
+
+.nav-icon {
+	mix-blend-mode: normal;
+	opacity: 0.3;
+}
+
+.basket-order {
+	background-color: var(--basic-green);
+}
+
+.market-description {
+	font-style: italic;
+	font-size: 16px;
+	line-height: 23px;
+	color: var(--basic-red);
+}
+
+.header-telephone {
+	border: 3px solid #FFFFFF;
+}
+
+.header-telephone a {
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 30px;
+	color: var(--basic-red);
+}
+
+.header-address {
+	color: var(--basic-dark);
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.login, .logon {
+	background-color: var(--basic-white);
+}
+
+.login a, .logon {
+	font-size: 21px;
+	line-height: 21px;
+	color: var(--basic-black);
+}
+
+/* О компании и контакты */
+
+.about-text, .contacts-text {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 13px;
+	line-height: 24px;
+}
+
+.transport-company {
+	list-style-image: url(../img/list-style.png);
+}
+
+.transport-company > li > b {
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.redbutton {
+	background-color: var(--basic-red);
+	font-size: 14px;
+	line-height: 18px;
+	color: var(--basic-white);
+	text-transform: uppercase;
+}
+
+.footer-navigation {
+	background-color: var(--basic-dark);
+}
+
+.footer-navigation a, .footer-navigation p {
+	color: var(--basic-white);
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.footer-navigation-bottom a {
+	color: var(--text-yellow);
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.footer-end {
+	background-color: var(--basic-darker);
+}
+
+.footer-end p {
+	color: var(--basic-white);
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.html-academy {
+	color: var(--text-yellow);
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.social-icons {
+	width: 44px;
+	height: 44px;
+	border-radius: 40px;
+	background: linear-gradient(0deg, #212A3A, #212A3A);
+}
+
+/* Каталог */
+
+.cart-full {
+	background-color: var(--basic-red);
+}
+
+.user-account {
+	background-color: var(--basic-white);
+}
+
+.user-account a {
+	font-size: 21px;
+	line-height: 21px;
+	color: var(--basic-black);
+}
+
+.sub-user-account a {
+	font-size: 16px;
+	line-height: 18px;
+	color: var(--basic-dark);
+}
+
+.dot {
+	width: 4px;
+	height: 4px;
+	border-radius: 4px;
+	background: linear-gradient(0deg, var(--basic-dark), var(--basic-dark)), #FFFFFF;
+}
+
+.nav-catalog a {
+	font-size: 13px;
+	line-height: 18px;
+	text-transform: uppercase;
+	color: var(--basic-black);
+}
+
+.h1-category {
+	font-size: 30px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: var(--basic-dark);
+	background-color: var(--catalog-cold)
+}
+
+/* Фильтры */
+
+.h3-filter {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 17px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: var(--basic-black);
+}
+
+.label-checkbox label{
+	font-family: 'PT Sans', sans-serif;
+	font-size: 15px;
+	line-height: 19px;
+	text-transform: uppercase;
+	color: var(--basic-black);
+}
+
+.filter-button {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	text-transform: uppercase;
+	color: var(--basic-black);
+	border: 1px solid #E5E5E5;
+}
+
+/* Карточки продуктов */
+
+.product-cards-catalog {
+
+}
+
+.product-card {
+	border: 1px solid #EAEAEA;
+}
+
+.product-card h4 {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 20px;
+	color: var(--basic-black);
+}
+
+.product-card p {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 18px;
+	color: var(--text-grey);
+	text-decoration-line: line-through;
+	text-transform: uppercase;
+}
+
+.red-button {
+	padding: 10px 44px 10px 32px;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 18px;
+	color: var(--basic-white);
+	text-transform: uppercase;
+	background-image: url(../img/red-button.svg);
+	border: none;
+}
+
+.buy-button {
+	font-size: 14px;
+	line-height: 18px;
+	color: var(--basic-white);
+	text-transform: uppercase;
+	background-color: var(--basic-green);
+	border: none;
+	border-radius: 2px;
+	box-shadow: inset 0px -3px 0px #367315;
+}
+
+.bookmark-button {
+	font-size: 14px;
+	line-height: 18px;
+	color: var(--basic-black);
+	text-transform: uppercase;
+	border: 3px solid var(--basic-green);
+	background-color: var(--basic-white);
+	border-radius: 2px;
+}
