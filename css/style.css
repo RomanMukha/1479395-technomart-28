@@ -1,6 +1,6 @@
 :root {
-	--basic-red: #EE3643;
-	--basic-green: #63A63E;
+	--basic-red: #EE3643; /* red-hover */
+	--basic-green: #63A63E;/*  green-click */
 	--basic-black: #000000;
 	--basic-dark: #32425C;
 	--basic-darker: #293449;
@@ -22,7 +22,16 @@
 	--card-pink: #DC91D8;
 	--card-green: #8ED78F;
 
-	--logo-active: #85CD8C;
+/* active */
+	--logo-active: #BA2732;
+	--grey-click: rgba(255, 255, 255, 0.5);
+	--dark-background: #161D29;
+/* hover */
+	--hover-green: #5FBB2D;
+	--basic-grey2: #3D546F;
+/* focus */
+	--hover-green: #5FBB2D;
+
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -92,8 +101,33 @@ img {
 	opacity: 0.3;
 }
 
+.nav-icon:hover {
+	opacity: 1;
+}
+
+.nav-icon:active {
+	opacity: 0.3;
+}
+
+.bookmark:active, .cart:active {
+	background-color: var(--dark-background);
+}
+
+.bookmark a:active, .cart a:active {
+	color: var(--grey-click);
+}
+
 .basket-order {
 	background-color: var(--basic-green);
+}
+
+.basket-order:hover {
+	background-color: var(--hover-green);
+}
+
+.basket-order:active {
+	background-color: var(--basic-green);
+	color: var(--grey-click);
 }
 
 .market-description {
@@ -248,7 +282,10 @@ img {
 	background: linear-gradient(0deg, var(--basic-dark), var(--basic-dark)), #FFFFFF;
 }
 
-.nav-catalog {list-style: none;}
+.nav-catalog {
+	list-style: none;
+	font-family: 'PT Sans', sans-serif;
+}
 
 .nav-catalog a {
 	font-size: 13px;
@@ -262,7 +299,8 @@ img {
 	line-height: 30px;
 	text-transform: uppercase;
 	color: var(--basic-dark);
-	background-color: var(--catalog-cold)
+	background-color: var(--catalog-cold);
+	font-weight: normal;
 }
 
 /* Каталог - фильтры */
@@ -275,7 +313,7 @@ img {
 	color: var(--basic-black);
 }
 
-.label-checkbox {list-style: none;}
+.label-checkbox, .label-radio {list-style: none;}
 
 .label-checkbox label{
 	font-family: 'PT Sans', sans-serif;
@@ -284,8 +322,6 @@ img {
 	text-transform: uppercase;
 	color: var(--basic-black);
 }
-
-.label-radio {list-style: none;}
 
 .filter-button {
 	font-family: 'PT Sans', sans-serif;
