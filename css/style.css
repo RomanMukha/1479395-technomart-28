@@ -74,6 +74,11 @@ img {
 	line-height: 24px;
 }
 
+.main-navigation a:hover {background-color: var(--basic-darker);}
+.main-navigation a:active {
+	opacity: 0.5;
+	background-color: #1D2739;}
+
 .logo-navigation {
 	background-color: var(--basic-darker);
 }
@@ -101,19 +106,30 @@ img {
 	opacity: 0.3;
 }
 
-.nav-icon:hover {
+.cart:hover .nav-icon, 
+.bookmark:hover .nav-icon,
+.search-form:hover .nav-icon {
 	opacity: 1;
 }
 
-.nav-icon:active {
+.cart:active .nav-icon, 
+.bookmark:active .nav-icon {
 	opacity: 0.3;
 }
 
-.bookmark:active, .cart:active {
+.search:focus {
+	background-color: var(--basic-white);
+	border: none;
+	color: var(--basic-black);
+}
+
+.bookmark:active,
+.cart:active {
 	background-color: var(--dark-background);
 }
 
-.bookmark a:active, .cart a:active {
+.bookmark:active a,
+.cart:active a {
 	color: var(--grey-click);
 }
 
@@ -162,6 +178,14 @@ img {
 	font-size: 21px;
 	line-height: 21px;
 	color: var(--basic-black);
+}
+
+.login:hover a, .logon:hover {
+	color: var(--basic-red);
+}
+
+.login:active a, .logon:active {
+	color: var(--basic-grey);
 }
 
 /* О компании и контакты */
@@ -224,9 +248,18 @@ img {
 	line-height: 24px;
 }
 
+/* Это поправили на последнем макете
+ 
 .footer-navigation-bottom li:nth-child(2) a {
 	color: var(--text-yellow2);
-}
+} */
+
+.footer-navigation-top a:hover,
+.footer-navigation-bottom a:hover {text-decoration-line: underline;}
+.footer-navigation-top a:active,
+.footer-navigation-bottom a:active {
+	text-decoration-line: none;
+	opacity: 0.5}
 
 .footer-end {
 	background-color: var(--basic-darker);
@@ -244,6 +277,9 @@ img {
 	line-height: 18px;
 }
 
+.html-academy:hover {text-decoration-line: underline;}
+.html-academy:active {text-decoration: none; color: var(--basic-red);}
+
 .social-icons-ul {list-style: none;}
 
 .social-icons {
@@ -252,6 +288,8 @@ img {
 	border-radius: 40px;
 	background: linear-gradient(0deg, #212A3A, #212A3A);
 }
+
+.social-icons:hover, .social-icons:active {background: var(--basic-red);}
 
 /* Каталог */
 
@@ -269,11 +307,18 @@ img {
 	color: var(--basic-black);
 }
 
+.user-account:active a {
+	color: var(--basic-grey);
+}
+
 .sub-user-account a {
 	font-size: 16px;
 	line-height: 18px;
 	color: var(--basic-dark);
 }
+
+.sub-user-account a:hover {color: var(--basic-red);}
+.sub-user-account a:active {color: var(--basic-grey);}
 
 .dot {
 	width: 4px;
@@ -281,6 +326,9 @@ img {
 	border-radius: 4px;
 	background: linear-gradient(0deg, var(--basic-dark), var(--basic-dark)), #FFFFFF;
 }
+
+.dot:hover {background: var(--basic-red);}
+.dot:active {background: var(--basic-grey);}
 
 .nav-catalog {
 	list-style: none;
