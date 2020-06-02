@@ -1,6 +1,6 @@
 :root {
 	--basic-red: #EE3643; /* red-hover */
-	--basic-green: #63A63E;/*  green-click */
+	--basic-green: #63A63E;green-click
 	--basic-black: #000000;
 	--basic-dark: #32425C;
 	--basic-darker: #293449;
@@ -8,7 +8,6 @@
 	--basic-grey: #C5C5C5;
 	
 	--text-yellow: #FFD180;
-	--text-yellow2: #FFDA96;
 	--text-grey: #A9A9A9;
 	
 	--index-cold: #F1F5F7;
@@ -17,10 +16,13 @@
 	--catalog-warm: #F7F3EC;
 	--footer-text: #F3F7F9;
 
-	--card-yellow: #FFC047;
+/* category */
+
+	--card-yellow1: #FFBF47;
 	--card-blue: #3BBCE3;
 	--card-pink: #DC91D8;
 	--card-green: #8ED78F;
+	--card-yellow2: #FFC047;
 
 /* active */
 	--logo-active: #BA2732;
@@ -102,7 +104,6 @@ img {
 }
 
 .nav-icon {
-	mix-blend-mode: normal;
 	opacity: 0.3;
 }
 
@@ -186,6 +187,142 @@ img {
 
 .login:active a, .logon:active {
 	color: var(--basic-grey);
+}
+
+/* Категории на главной */
+
+.ul-category, .ul-category2 {list-style: none;}
+
+.ul-category h3, .ul-category2 h3 {
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 30px;
+	color: var(--basic-white);
+}
+
+.category-text {
+	background-color: rgba(255, 255, 255, 0.3);
+	color: var(--basic-white);
+	text-transform: uppercase;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.ul-category li:nth-child(1) {
+	background-color: var(--card-yellow1);
+}
+
+.ul-category li:nth-child(2) {
+	background-color: var(--card-blue);
+}
+
+.ul-category li:nth-child(3) {
+	background-color: var(--card-pink);
+}
+
+.perforator-background {background: url(../img/slide-perforator.jpg) no-repeat;}
+.drill-background {background: url(../img/slide-drill.jpg) no-repeat;}
+
+.big-slide-title {
+	background: rgba(0, 0, 0, 0.25);
+}
+
+.big-slide-title h2 {
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 36px;
+	text-transform: uppercase;
+	color: var(--basic-white);
+}
+
+.big-slide-title p {
+	font-size: 18px;
+	line-height: 24px;
+	color: var(--basic-white);
+}
+
+.index-red-button {
+	background-color: var(--basic-red);
+	color: var(--basic-white);
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase;
+}
+
+.ul-category2 li:nth-child(1) {
+	background-color: var(--card-green);
+}
+
+.ul-category2 li:nth-child(2) {
+	background-color: var(--card-yellow2);
+}
+
+/* Популярные товары и производители */
+
+.h2-popular {
+	background-color: var(--index-warm);
+}
+
+.h2-popular h2 {
+	font-size: 30px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: var(--basic-dark);
+	font-weight: normal;
+}
+
+.popular-vendors {list-style: none;}
+
+.popular-vendors li {
+	background: var(--basic-white);
+	border: 1px solid #EAEAEA;
+}
+
+/* Сервисы */
+
+.h2-services {
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: var(--basic-black);
+}
+
+.h3-services {
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: var(--basic-dark);
+}
+
+.services {background-color: var(--index-cold);}
+
+.services p {
+	font-family: PT Sans;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 24px;
+	color: var(--basic-black);
+}
+
+.services ul {list-style: none;}
+
+.services-switch {
+	font-weight: bold;
+	font-size: 21px;
+	line-height: 30px;
+	color: var(--basic-white);
+	box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+	background: var(--basic-dark);
+	border:none;
+}
+
+.services-switch.switch-active {
+	color: var(--basic-dark);
+	box-shadow: 0px 1px 0px #FFFFFF;
+	background: var(--basic-white);
+	border:none;
 }
 
 /* О компании и контакты */
@@ -353,6 +490,47 @@ img {
 
 /* Каталог - фильтры */
 
+.h2-filter {
+	font-family: PT Sans;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 18px;
+	text-transform: uppercase;
+	background-color: var(--catalog-warm);
+}
+
+.section-sortby {
+	background-color: var(--catalog-warm);
+}
+
+.section-sortby button {
+	background: none;
+	border: none;
+}
+
+.button-sortby {
+	color: var(--basic-black);
+	opacity: 0.3;
+	font-family: PT Sans;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 18px;
+	text-transform: uppercase;
+}
+
+.button-sortby.sortby-active {
+	color: var(--basic-red);
+	opacity: 1;
+}
+
+.section-sortby h2 {
+	font-family: PT Sans;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 18px;
+	text-transform: uppercase;
+}
+
 .h3-filter {
 	font-family: 'PT Sans', sans-serif;
 	font-size: 17px;
@@ -414,7 +592,7 @@ img {
 	line-height: 18px;
 	color: var(--basic-white);
 	text-transform: uppercase;
-	background-image: url(../img/red-button.svg);
+	background: url(../img/red-button.svg) no-repeat;
 	border: none;
 }
 
