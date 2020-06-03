@@ -58,6 +58,17 @@ img {
 	height: auto;
 }
 
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
 .header {
 	background-color: var(--index-cold);
 }
@@ -94,9 +105,23 @@ img {
 	background-color: var(--logo-active);
 }
 
+.search-form {
+	position: relative;
+}
+
 .search {
 	background-color: var(--basic-darker);
 	border: none;
+	line-height: 24px;
+	padding-left: 43px;
+	color: var(--basic-white);
+	-webkit-appearance:none;
+}
+
+.search-icon {
+	position: absolute;
+	top: 4px;
+	left: 17px;
 }
 
 .search::placeholder {
@@ -113,6 +138,14 @@ img {
 	opacity: 1;
 }
 
+.search:focus + svg path {
+	fill: var(--basic-red);
+}
+
+.search:focus + svg {
+	opacity: 1;
+}
+
 .cart:active .nav-icon, 
 .bookmark:active .nav-icon {
 	opacity: 0.3;
@@ -120,8 +153,8 @@ img {
 
 .search:focus {
 	background-color: var(--basic-white);
-	border: none;
 	color: var(--basic-black);
+	outline: none;
 }
 
 .bookmark:active,
@@ -185,8 +218,16 @@ img {
 	color: var(--basic-red);
 }
 
+.login:hover path {
+	fill: var(--basic-grey2);
+}
+
 .login:active a, .logon:active {
 	color: var(--basic-grey);
+}
+
+.login:active path {
+	fill: var(--basic-grey);
 }
 
 /* Категории на главной */
@@ -330,6 +371,7 @@ img {
 .h2-company, .h2-contacts {
 	font-size: 30px;
 	line-height: 30px;
+	font-weight: normal;
 	text-transform: uppercase;
 }
 
@@ -444,8 +486,16 @@ img {
 	color: var(--basic-black);
 }
 
+.user-account:hover path {
+	fill: var(--basic-grey2);
+}
+
 .user-account:active a {
 	color: var(--basic-grey);
+}
+
+.user-account:active path {
+	fill: var(--basic-grey);
 }
 
 .sub-user-account a {
@@ -541,7 +591,7 @@ img {
 
 .label-checkbox, .label-radio {list-style: none;}
 
-.label-checkbox label{
+.label-checkbox label, .label-radio label {
 	font-family: 'PT Sans', sans-serif;
 	font-size: 15px;
 	line-height: 19px;
@@ -556,6 +606,7 @@ img {
 	text-transform: uppercase;
 	color: var(--basic-black);
 	border: 1px solid #E5E5E5;
+	background: none;
 }
 
 /* Карточки продуктов */
@@ -564,6 +615,10 @@ img {
 
 .product-card {
 	border: 1px solid #EAEAEA;
+}
+
+.product-card div {
+	display: none;
 }
 
 .product-card h4 {
