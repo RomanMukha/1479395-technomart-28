@@ -6,6 +6,7 @@
 	--basic-darker: #293449;
 	--basic-white: #ffffff;
 	--basic-grey: #C5C5C5;
+	--basic-grey2: #E5E5E5;
 	
 	--text-yellow: #FFD180;
 	--text-grey: #A9A9A9;
@@ -32,7 +33,7 @@
 	--hover-green: #5FBB2D;
 	--basic-grey2: #3D546F;
 /* focus */
-	--hover-green: #5FBB2D;
+	--active-green: #518534;
 
 }
 
@@ -243,10 +244,19 @@ img {
 
 .category-text {
 	background-color: rgba(255, 255, 255, 0.3);
+	background-blend-mode: multiply;
 	color: var(--basic-white);
 	text-transform: uppercase;
 	font-size: 14px;
 	line-height: 18px;
+}
+
+.category-text:hover {
+	background-color: rgba(197, 197, 197, 0.3);
+}
+
+.category-text:active {
+	background-color: rgba(169, 169, 169, 0.3);
 }
 
 .ul-category li:nth-child(1) {
@@ -290,6 +300,10 @@ img {
 	text-transform: uppercase;
 }
 
+.index-red-button:active {
+	background-color: var(--logo-active);
+}
+
 .ul-category2 li:nth-child(1) {
 	background-color: var(--card-green);
 }
@@ -317,6 +331,15 @@ img {
 .popular-vendors li {
 	background: var(--basic-white);
 	border: 1px solid #EAEAEA;
+}
+
+.popular-vendors li:hover {
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.popular-vendors li:active {
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+	opacity: 0.5;
 }
 
 /* Сервисы */
@@ -357,9 +380,14 @@ img {
 	box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
 	background: var(--basic-dark);
 	border:none;
+	outline:none;
 }
 
-.services-switch.switch-active {
+.services-switch:hover {
+	background: var(--basic-darker);
+}
+
+.services-switch.switch-active, .services-switch:active {
 	color: var(--basic-dark);
 	box-shadow: 0px 1px 0px #FFFFFF;
 	background: var(--basic-white);
@@ -388,14 +416,6 @@ img {
 .transport-company > li > b {
 	font-size: 18px;
 	line-height: 24px;
-}
-
-.redbutton {
-	background-color: var(--basic-red);
-	font-size: 14px;
-	line-height: 18px;
-	color: var(--basic-white);
-	text-transform: uppercase;
 }
 
 /* Футер */
@@ -553,25 +573,48 @@ img {
 	background-color: var(--catalog-warm);
 }
 
-.section-sortby button {
+.button-sortby-updown {
 	background: none;
 	border: none;
+	outline: none;
+	cursor: pointer;
 }
 
+.button-sortby-updown path {fill:var(--basic-grey);}
+
 .button-sortby {
-	color: var(--basic-black);
-	opacity: 0.3;
+	color: rgba(0, 0, 0, 0.3);
+	padding: 0;
 	font-family: PT Sans;
 	font-weight: normal;
 	font-size: 13px;
 	line-height: 18px;
 	text-transform: uppercase;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: var(--basic-red);
+}
+
+.button-sortby:hover {
+	border-bottom-style: solid;
+	color: var(--basic-black);
+}
+
+.button-sortby:active {
+	color: var(--basic-red);
+	border: none;
 }
 
 .button-sortby.sortby-active {
 	color: var(--basic-red);
-	opacity: 1;
+	border: none;
 }
+
+.button-sortby-updown.sortby-active path {fill: var(--basic-red);}
+
+.button-sortby-updown:hover path {fill: var(--basic-black);}
+.button-sortby-updown:active {outline: none;}
+.button-sortby-updown:active path {fill: var(--basic-red);}
 
 .section-sortby h2 {
 	font-family: PT Sans;
@@ -615,9 +658,25 @@ img {
 
 .product-card {
 	border: 1px solid #EAEAEA;
+	background-color: var(--basic-white);
 }
 
 .product-card div {
+	display: none;
+}
+
+.product-card:hover {
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-card:hover div {
+	display: flex;
+	flex-direction: column;
+	width: 135px; /* временно */
+	margin: 50px; /* временно */
+}
+
+.product-card:hover .perforator-img {
 	display: none;
 }
 
@@ -662,6 +721,14 @@ img {
 	box-shadow: inset 0px -3px 0px #367315;
 }
 
+.buy-button:hover {
+	background-color: var(--hover-green);
+}
+
+.buy-button:active {
+	background-color: var(--active-green);
+}
+
 .bookmark-button {
 	font-size: 14px;
 	line-height: 18px;
@@ -670,6 +737,62 @@ img {
 	border: 3px solid var(--basic-green);
 	background-color: var(--basic-white);
 	border-radius: 2px;
+}
+
+.bookmark-button:hover {
+	border-color: var(--basic-dark);
+	color: var(--basic-dark);
+}
+
+.bookmark-button:active {
+	border-color: var(--basic-dark);
+	color: var(--basic-dark);
+	opacity: 0.5;
+}
+
+.page-buttons {
+	list-style: none;
+}
+
+.page-button {
+	color: var(--basic-black);
+	border: 1px solid #E5E5E5;
+	background-color: var(--basic-white);
+	border-radius: 2px;
+	text-transform: uppercase;
+	font-family: PT Sans;
+	font-size: 13px;
+	line-height: 18px;
+}
+
+.page-button:hover {
+	border-color: var(--basic-grey);
+}
+
+.page-button:active {
+	border-color: var(--basic-red);
+}
+
+.page-button.page-active {
+	background-color: var(--basic-red);
+	color: var(--basic-white);
+}
+
+/* Пара слов о перфораторах */
+
+.fewwords-about {background-color: var(--index-cold);}
+
+.fewwords-about h2 {
+	font-size: 30px;
+	line-height: 30px;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+.fewwords-about p {
+	font-family: PT Sans;
+	font-size: 13px;
+	line-height: 24px;
 }
 
 /* index popup */
