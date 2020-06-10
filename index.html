@@ -70,22 +70,22 @@
 		<main>
 			<div class="container">
 				<div class="grid-category">
-					<div class="category-materials">
-						<img src="img/new.svg" width="70" height="70" alt="New">
+					<div class="category-materials category-cards">
+						<img class="new-on-category" src="img/new.svg" width="70" height="70" alt="New">
 						<div>
 							<h3 class="h3-cards">Материалы</h3>
 							<a class="category-text" href="catalog.html">На любой вкус</a>
 						</div>
 						<img src="img/icon-1.svg" width="44" height="65" alt="Материалы">
 					</div>
-					<div class="category-instruments">
+					<div class="category-instruments category-cards">
 						<div>
 							<h3 class="h3-cards">Инструмент</h3>
 							<a class="category-text" href="catalog.html">На любой вкус</a>
 						</div>
 						<img src="img/icon-2.svg" width="75" height="61" alt="Инструменты">
 					</div>
-					<div class="category-construction">
+					<div class="category-construction category-cards">
 						<div>
 							<h3 class="h3-cards">Техника</h3>
 							<a class="category-text" href="catalog.html">Для стройки</a>
@@ -93,32 +93,32 @@
 						<img src="img/icon-3.svg" width="78" height="62" alt="Техника">
 					</div>
 					<article class="big-slide perforator-background">
-						<div class="big-slide-title">
+						<div class="big-slide-title big-slide-title-perfo">
 							<h2>Перфораторы</h2>
 							<p>Настоящие мужские игрушки</p>
 						</div>
-						<div class="big-slide-title">
+						<div class="big-slide-title big-slide-title-drill">
 							<h2>Дрели</h2>
 							<p>Соседям на радость!</p>
 						</div>
-						<div>
-							<button><img src="img/icon-left.svg" width="22" height="40" alt="Прокрутить назад"></button>
-							<button disabled><img src="img/icon-right.svg" width="22" height="40" alt="Прокрутить вперед"></button>
+						<div class="bigslide-arrows">
+							<button class="bigslide-arrow-left"></button>
+							<button class="bigslide-arrow-right" disabled></button>
 						</div>
-						<a class="index-red-button" href="catalog.html">Открыть каталог</a>
-						<div>
-							<button><img src="img/icon-slidedot.svg" width="10" height="10" alt="Первый слайд"></button>
-							<button><img src="img/icon-slidedot-active.svg" width="10" height="10" alt="Второй слайд"></button>
+						<a class="index-red-button big-slide-button" href="catalog.html">Открыть каталог</a>
+						<div class="bigslide-dots">
+							<button class="bigslide-dot" aria-label="Первый слайд"></button>
+							<button class="bigslide-dot bigslide-dot-active" aria-label="Второй слайд"></button>
 						</div>
 					</article>
-					<div class="category-discount">
+					<div class="category-discount category-cards">
 						<div>
 							<h3 class="h3-cards">Скидки 50%</h3>
 							<a class="category-text" href="blank.html">На 350 товаров</a>
 						</div>
 						<img src="img/icon-4.svg" width="59" height="72" alt="Корзина">
 					</div>
-					<div class="category-delivery">
+					<div class="category-delivery category-cards">
 						<div>
 							<h3 class="h3-cards">Доставка</h3>
 							<a class="category-text" href="blank.html">Бесплатно</a>
@@ -129,7 +129,7 @@
 				<section>
 					<div class="h2-popular-1">
 						<h2>Популярные товары:</h2>
-						<a class="index-red-button" href="catalog.html">Все популярные товары</a>
+						<a class="index-red-button button-popular" href="catalog.html">Все популярные товары</a>
 					</div>
 					<ul class="product-cards-catalog product-cards-index">
 						<li class="product-card">
@@ -143,7 +143,7 @@
 							<button class="red-button">25500 Р.</button>
 						</li>
 						<li class="product-card">
-							<img src="img/new.svg" width="70" height="70" alt="New">
+							<img class="new-img" src="img/new.svg" width="70" height="70" alt="New">
 							<img class="perforator-img" src="img/bosch2k3k.jpg" width="127" height="112" alt="Перфоратор">
 							<div>
 			    				<button class="buy-button"><img src="img/icon-cart.svg" width="15" height="15" alt="В корзину">Купить</button>
@@ -164,7 +164,7 @@
 							<button class="red-button">25500 Р.</button>
 						</li>
 						<li class="product-card">
-							<img src="img/new.svg" width="70" height="70" alt="New">
+							<img class="new-img" src="img/new.svg" width="70" height="70" alt="New">
 							<img class="perforator-img" src="img/bosch2k3k.jpg" width="127" height="112" alt="Перфоратор">
 							<div>
 			    				<button class="buy-button"><img src="img/icon-cart.svg" width="15" height="15" alt="В корзину">Купить</button>
@@ -178,7 +178,7 @@
 				<section>
 					<div class="h2-popular-2">
 						<h2>Популярные производители:</h2>
-						<a class="index-red-button" href="catalog.html">Все производители</a>
+						<a class="index-red-button button-popular" href="catalog.html">Все производители</a>
 					</div>
 					<ul class="popular-vendors">
 						<!-- 220x145 -->
@@ -192,43 +192,49 @@
 						<li><a href="blank.html"><img src="img/metabo.png" width="204" height="69" alt="Metabo"></a></li>
 					</ul>
 				</section>
-			</div> <!-- container -->
+			</div> <!-- container-end -->
 				<section class="services">
 					<div class="container">
 						<h2 class="h2-services">Сервисы</h2>
-						<p>
+						<p class="services-maintext">
 							Хороший интернет-магазин отличается от плохого не только ценами!
 							Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
 						</p>
-						<ul>
-							<li><button class="services-switch switch-active">Доставка</button></li>
-							<li><button class="services-switch">Гарантия</button></li>
-							<li><button class="services-switch">Кредит</button></li>
-						</ul>
-						<div>
-							<h3 class="h3-services">Доставка</h3>
-							<p>
-								Мы с удовольствием доставим ваш товар прямо 
-								к вашему подъезду совершенно бесплатно!
-								Ведь мы неплохо заработаем, 
-								поднимая его на ваш этаж!
-							</p>
-							<img src="img/delivery.png" width="468" height="261" alt="Доставка">
-						</div>
-						<div>
-							<h3 class="h3-services">Гарантия</h3>
-							<p>
-								Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
-							</p>
-							<img src="img/guarantee.png" width="389" height="283" alt="Гарантия">
-						</div>
-						<div>
-							<h3 class="h3-services">Кредит</h3>
-							<p>
-								Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
-							</p>
-							<a class="index-red-button" href="blank.html">Отправить заявку</a>
-							<img src="img/credit.png" width="465" height="285" alt="Кредит">
+						<div class="services-wrapper">
+							<div class="services-switches">
+								<ul>
+									<li><button class="services-switch switch-active">Доставка</button></li>
+									<li><button class="services-switch">Гарантия</button></li>
+									<li><button class="services-switch">Кредит</button></li>
+								</ul>
+								<div class="switcher-rightborder"></div>
+							</div>
+							<div class="services-category services-category-delivery services-active">
+								<h3 class="h3-services">Доставка</h3>
+								<p>
+									Мы с удовольствием доставим ваш товар прямо<br>
+									к вашему подъезду совершенно бесплатно!<br>
+									Ведь мы неплохо заработаем,<br>
+									поднимая его на ваш этаж!
+								</p>
+								<!-- <img src="img/delivery.png" width="468" height="261" alt="Доставка"> -->
+							</div>
+							<div class="services-category services-category-guarantee">
+								<h3 class="h3-services">Гарантия</h3>
+								<p>
+									Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
+								</p>
+								<!-- <img src="img/guarantee.png" width="389" height="283" alt="Гарантия"> -->
+							</div>
+							<div class="services-category services-category-credit">
+								<h3 class="h3-services">Кредит</h3>
+								<p>
+									Залезть в долговую яму стало проще!<br>
+									Кредитные консультанты придут вам на помощь.
+								</p>
+								<a class="index-red-button" href="blank.html">Отправить заявку</a>
+								<!-- <img src="img/credit.png" width="465" height="285" alt="Кредит"> -->
+							</div>
 						</div>
 					</div>
 				</section>
