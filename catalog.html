@@ -80,18 +80,18 @@
     	<div class="container">
     		<div class="main-catalog-grid">
 				<ul class="nav-catalog">
-					<li><a href="index.html"><img src="img/icon-home.svg" alt="Домой"></a></li>
+					<li><a href="index.html"><img src="img/icon-home.svg" alt="Домой" width="14" height="12"></a></li>
 					<li>
-						<img src="img/icon-right-small.svg" width="8" height="12" alt="Следующий раздел">
-						<a href="">Каталог</a>
+						<div class="nav-arrow"></div>
+						<a href="blank.html">Каталог</a>
 					</li>
 					<li>
-						<img src="img/icon-right-small.svg" width="8" height="12" alt="Следующий раздел">
+						<div class="nav-arrow"></div>
 						<a href="blank.html">Инструменты</a>
 					</li>
 					<li>
-						<img src="img/icon-right-small.svg" width="8" height="12" alt="Следующий раздел">
-						<a href="blank.html">Перфораторы</a>
+						<div class="nav-arrow"></div>
+						<a href="">Перфораторы</a>
 					</li>
 				</ul>
 				<h1 class="h1-category">
@@ -99,44 +99,60 @@
 				</h1>
 				<form action="https://echo.htmlacademy.ru/" class="catalog-form">
 					<h2 class="h2-filter">Фильтр:</h2>
-					<h3 class="h3-filter">Цена:</h3>
-					<div>
-						<div><img src="img/filter-button.svg" width="20" height="22" alt="Цена от"></div>
-						<div><img src="img/filter-button.svg" width="20" height="22" alt="Цена до"></div>
-						<div><!-- ценовая полоска --></div>
-					</div>
-						<label class="visually-hidden" for="min-price">Минимальная цена</label>
-						<input type="text" name="min-price" id="min-price" placeholder="0">
-						<span> - </span>
-						<label class="visually-hidden" for="max-price">Максимальная цена</label>
-						<input type="text" name="max-price" id="max-price" placeholder="3000">
-					<h3 class="h3-filter">Прозводители:</h3>
-					<ul class="label-checkbox">
-						<li><label><input type="checkbox" name="bosch" checked>Bosch</label></li>
-						<li><label><input type="checkbox" name="interskol">Интерскол</label></li>
-						<li><label><input type="checkbox" name="makita" checked>Makita</label></li>
-						<li><label><input type="checkbox" name="dewalt">Dewalt</label></li>
-						<li><label><input type="checkbox" name="hitachi">Hitachi</label></li>
-					</ul>
-					<h3 class="h3-filter">Питание:</h3>
-					<ul class="label-radio">
-						<li><label><input type="radio" name="power" value="rechargeable" checked>Аккумуляторные</label></li>
-						<li><label><input type="radio" name="power" value="wired">Сетевые</label></li>
-					</ul>
+					<fieldset class="fieldset-price">
+						<legend class="h3-filter">Цена:</legend>
+						<div class="range-filter">
+							<div class="range-controls">
+								<div class="scale">
+									<div class="bar"></div>
+								</div>
+								<div class="toggle toggle-min" tabindex="0"></div>
+								<div class="toggle toggle-max" tabindex="0"></div>
+							</div>
+							<div class="price-controls">
+								<label class="visually-hidden" for="min-price">Цена от </label>
+								<input type="number" name="min-price" id="min-price" value="0">
+								<span> — </span>
+								<label class="visually-hidden" for="max-price">Цена до </label>
+								<input type="number" name="max-price" id="max-price" value="30000">
+							</div>
+						</div>
+					</fieldset>
+					<div class="separator separator-1"></div>
+					<fieldset class="fieldset-manufacture">
+						<legend class="h3-filter">Прозводители:</legend>
+						<ul class="label-checkbox">
+							<li><label><input type="checkbox" name="bosch" checked>Bosch</label></li>
+							<li><label><input type="checkbox" name="interskol">Интерскол</label></li>
+							<li><label><input type="checkbox" name="makita" checked>Makita</label></li>
+							<li><label><input type="checkbox" name="dewalt">Dewalt</label></li>
+							<li><label><input type="checkbox" name="hitachi">Hitachi</label></li>
+						</ul>
+					</fieldset>
+					<div class="separator separator-2"></div>
+					<fieldset class="fieldset-power">
+						<legend class="h3-filter">Питание:</legend>
+						<ul class="label-radio">
+							<li><label><input type="radio" name="power" value="rechargeable" checked>Аккумуляторные</label></li>
+							<li><label><input type="radio" name="power" value="wired">Сетевые</label></li>
+						</ul>
+					</fieldset>
 					<button class="filter-button" type="submit">Показать</button>
 				</form>
 				<div class="catalog-and-sortby">
 					<section class="section-sortby">
 						<h2>Сортировка:</h2>
-						<a href="" class="button-sortby sortby-active">По цене</a>
-						<a href="" class="button-sortby">По типу</a>
-						<a href="" class="button-sortby">По функционалу</a>
-						<button class="button-sortby-updown sortby-active">
-							<svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg>
-						</button>
-						<button class="button-sortby-updown">
-							<svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg>
-						</button>
+						<button class="button-sortby sortby-active" area-label="Сортировка по цене">По цене</button>
+						<button class="button-sortby" area-label="Сортировка по типу">По типу</button>
+						<button class="button-sortby" area-label="Сортировка по функционалу">По функционалу</button>
+						<div class="buttons-sortby-updown">
+							<button class="button-sortby-updown sortby-active" area-label="По возрастанию">
+								<svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg>
+							</button>
+							<button class="button-sortby-updown" area-label="По убыванию">
+								<svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg>
+							</button>
+						</div>
 					</section>
 					<ul class="product-cards-catalog product-cards-inner">
 						<li class="product-card">
@@ -343,14 +359,15 @@
 		</div>
 	</footer>
 	<div class="popup-order">
-		<button><img src="img/icon-close.svg" width="21" height="21" alt="Закрыть"></button>
-		<div>
+		<div class="popup-top-border"></div>
+		<button class="popup-cross" aria-lable="Закрыть"><img src="img/icon-close.svg" width="21" height="21" alt="Закрыть"></button>
+		<div class="popup-successtext">
 			<img src="img/icon-mark.svg" width="66" height="66" alt="Успешно">
 			<p>Товар добавлен в корзину!</p>
 		</div>
-		<div>
-			<a href="blank.html">Оформить заказ</a>
-			<button>Продолжить покупки</button>
+		<div class="popupcatalog-buttons">
+			<a class="index-red-button popupbutton-tobin" href="blank.html">Оформить заказ</a>
+			<button class="index-red-button popupbutton-close">Продолжить покупки</button>
 		</div>
 	</div>
   </body>
