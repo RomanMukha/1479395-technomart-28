@@ -493,6 +493,8 @@ img {
 	line-height: 18px;
 	text-transform: uppercase;
 	text-align: center;
+	display: block;
+	padding: 11px 0 9px 0;
 }
 
 .big-slide-button {
@@ -594,7 +596,6 @@ img {
 }
 
 .index-red-button.button-popular {
-	padding: 11px 0 9px 0;
 	width: 192px;
 }
 
@@ -794,18 +795,32 @@ img {
 /* О компании и контакты */
 
 .company-and-contacts {
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: 1fr 300px;
+	column-gap: 162px;
+	min-height: 356px;
 	margin: 70px 0;
+}
+
+.company-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .contacts-section {
 	width: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .contacts-section figure {
 	margin: 0;
 	padding: 0;
+	margin-bottom: 25px;
+	width: 300px;
+	height: 158px;
 }
 
 .h2-company, .h2-contacts {
@@ -814,16 +829,34 @@ img {
 	font-weight: normal;
 	text-transform: uppercase;
 	margin: 0;
+	padding: 0;
+	margin-bottom: 24px;
 }
 
 .about-text, .contacts-text {
 	font-family: 'PT Sans', sans-serif;
 	font-size: 13px;
 	line-height: 24px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.about-text:nth-child(2) {
+	margin-bottom: 25px;
+}
+
+.contacts-text {
+	width: 181px;
+	margin-bottom: 32px;
 }
 
 .transport-company {
 	list-style-image: url(../img/list-style.png);
+	padding: 0px;
+	margin: 0px;
+	margin-top: 1px;
+	margin-bottom: 20px;
+	padding-left: 33px;
 }
 
 .transport-company > li > b {
@@ -831,14 +864,16 @@ img {
 	line-height: 24px;
 }
 
+.transport-company li {margin-bottom: 12px;}
+.transport-company li:last-child {margin-bottom: 0px;}
+
+
 .index-red-button.button-about {
-	padding: 11px 40px 9px;
+	width: 220px;
 }
 
 .index-red-button.button-contacts {
-	display: block;
 	width: 100%;
-	padding: 11px 0 9px;
 }
 
 /* Футер */
