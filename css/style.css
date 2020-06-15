@@ -34,7 +34,6 @@
 	--basic-grey2: #3D546F;
 /* focus */
 	--active-green: #518534;
-
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -583,7 +582,7 @@ img {
 }
 .h2-popular-2 {
 	padding: 25px 19px 26px 28px;
-	margin-top: 52px;
+	margin-top: 50px;
 }
 
 .h2-popular-1 h2, .h2-popular-2 h2 {
@@ -601,7 +600,6 @@ img {
 
 .product-cards-index {
 	display: flex;
-	justify-content: space-between;
 	flex-wrap: wrap;
 	margin-bottom: 18px;
 }
@@ -851,11 +849,16 @@ img {
 }
 
 .transport-company {
-	list-style-image: url(../img/list-style.png);
+	list-style: none;
 	padding: 0px;
 	margin: 0px;
 	margin-top: 1px;
 	margin-bottom: 20px;
+}
+
+.transport-company li {
+	background: url(../img/list-style.png) no-repeat;
+	background-position: left center;
 	padding-left: 33px;
 }
 
@@ -1221,10 +1224,10 @@ img {
 	border-radius: 5px;
 }
 
-.price-controls input::-webkit-outer-spin-button,
+/* .price-controls input::-webkit-outer-spin-button,
 .price-controls input::-webkit-inner-spin-button {
     -webkit-appearance: none;
-    margin: 0;}
+    margin: 0;} */
 
 /* Ценовой фильтр - конец */
 
@@ -1346,6 +1349,7 @@ img {
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	margin-left: 35px;
 }
 
 .label-checkbox {margin-top: 17px;}
@@ -1363,6 +1367,58 @@ img {
 	line-height: 19px;
 	text-transform: uppercase;
 	color: var(--basic-black);
+	position: relative;
+	display: block;
+	cursor: pointer;
+	user-select: none;
+}
+
+.input-checkbox + label::before {
+	content: "";
+	position: absolute;
+	left: -35px;
+	top: -2px;
+	width: 27px;
+	height: 23px;
+	background-image: url(../img/checkbox-off.svg);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+.input-checkbox:checked + label::before {
+	content: "";
+	position: absolute;
+	left: -35px;
+	top: -2px;
+	width: 27px;
+	height: 23px;
+	background-image: url(../img/checkbox-on.svg);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+.input-radiobox + label::before {
+	content: "";
+	position: absolute;
+	left: -35px;
+	top: -3px;
+	width: 25px;
+	height: 25px;
+	background-image: url(../img/radio-off.svg);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+.input-radiobox:checked + label::before {
+	content: "";
+	position: absolute;
+	left: -35px;
+	top: -3px;
+	width: 25px;
+	height: 25px;
+	background-image: url(../img/radio-on.svg);
+	background-position: 0 0;
+	background-repeat: no-repeat;
 }
 
 .filter-button {
@@ -1404,7 +1460,7 @@ img {
 	min-height: 318px;
 	margin-right: 19px;
 	margin-bottom: 18px;
-	padding: 22px 17px 21px 18px;
+	padding: 6px 18px 21px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -1415,7 +1471,24 @@ img {
 	margin-right: 0;
 }
 
-.product-card div {
+.product-cards-index .product-card:nth-child(3n) {
+	margin-right: 20px;
+}
+
+.product-cards-index .product-card:nth-child(4n) {
+	margin-right: 0px;
+}
+
+.card-img-wrapper {
+	width: 184px;
+	height: 164px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 6px;
+}
+
+.buy-popup {
 	display: none;
 	margin-bottom: 54px;
 	margin-top: 16px;
@@ -1427,23 +1500,25 @@ img {
 	top: 0px;
 }
 
-.product-card .perforator-img {
+/* .product-card .perforator-img {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin-bottom: 28px;
-}
+} */
 
 .product-card:hover {
 	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-.product-card:hover div {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	width: 136px;
-	height: 88px;
+.buy-popup {
+	display: none;
+	margin: auto;
+	text-align: center;
+}
+
+.product-card:hover .buy-popup {
+	display: block;
 }
 
 .product-card:hover .perforator-img {
@@ -1459,6 +1534,7 @@ img {
 	padding: 0;
 	margin: 0;
 	text-align: center;
+	margin-bottom: 5px;
 }
 
 .product-card p {
@@ -1469,10 +1545,13 @@ img {
 	color: var(--text-grey);
 	text-decoration-line: line-through;
 	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
 }
 
 .red-button {
-	padding: 10px 44px 10px 32px;
+	width: 141px;
+	padding: 10px;
 	font-family: 'PT Sans', sans-serif;
 	font-size: 17px;
 	font-weight: bold;
@@ -1481,6 +1560,8 @@ img {
 	text-transform: uppercase;
 	background: url(../img/red-button.svg) no-repeat;
 	border: none;
+	outline: none;
+	left: 10px;
 }
 
 .buy-button {
@@ -1494,7 +1575,9 @@ img {
 	box-shadow: inset 0px -3px 0px #367315;
 	margin: 0;
 	padding: 10px;
+	width: 135px;
 	margin-bottom: 10px;
+	outline: none;
 }
 
 .buy-button img {
@@ -1519,6 +1602,8 @@ img {
 	border-radius: 2px;
 	margin: 0;
 	padding: 10px;
+	width: 135px;
+	outline: none;
 }
 
 .bookmark-button:hover {
@@ -1602,7 +1687,106 @@ img {
 
 /* index popup */
 
-.popup-map, .popup-form {display: none;}
+.popup-form {
+	position: fixed;
+	width: 620px;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+	background-color: var(--basic-white);
+	left: 0;
+	right: 0;
+	top: 120px;
+	bottom: auto;
+	margin: auto;
+	z-index: 3;
+
+	display: none;
+}
+
+.form-wrapper {
+	padding: 39px 80px 37px;
+	display: block;
+}
+
+.login-wrapper, .email-wrapper {
+	width: 220px;
+}
+
+.form-wrapper input, .form-wrapper textarea {
+	border: 2px solid var(--basic-grey);
+	border-radius: 2px;
+	padding: 0;
+	margin: 0;
+}
+
+.popup-form-label {
+	display: inline-block;
+	padding-bottom: 11px;
+}
+
+.form-wrapper input {
+	font-family: PT Sans;
+	font-size: 13px;
+	line-height: 24px;
+	color: var(--basic-black);
+	width: 100%;
+	padding: 7px 12px 7px 12px;
+}
+
+.form-wrapper input::placeholder, .form-wrapper textarea::placeholder {
+	font-family: PT Sans;
+	font-size: 13px;
+	line-height: 24px;
+	color: var(--text-grey);
+}
+
+.form-wrapper textarea {
+	resize: none;
+	font-family: PT Sans;
+	font-size: 13px;
+	line-height: 24px;
+	width: 460px;
+	height: 114px;
+	padding: 7px 12px 7px 12px;
+	display: block;
+}
+
+.form-login-password {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 13px;
+}
+
+.popup-form-bottom {
+	background-color: #F4F4F4;
+	padding: 37px 80px;
+}
+
+.popup-submit-button {
+	border: none;
+	width: 100%;
+}
+
+/* map */
+
+.popup-map {
+	position: fixed;
+	width: 943px;
+	height: 449px;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+	background-color: var(--basic-white);
+	left: 0;
+	right: 0;
+	top: 120px;
+	bottom: auto;
+	margin: auto;
+	z-index: 4;
+
+	display: none;
+}
+
+.popup-map iframe {
+	border: none;
+}
 
 /* catalog popup */
 
@@ -1626,10 +1810,10 @@ img {
 	position: absolute;
 	right: 11px;
 	top: 18px;
-	width: 20px;
-	height: 20px;
+	width: 21px;
+	height: 21px;
 	border: none;
-	background: transparent;
+	background: url(../img/icon-close.svg) no-repeat;
 	padding: 0px;
 	margin: 0px;
 	cursor: pointer;
