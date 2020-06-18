@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
   </head>
@@ -23,14 +23,12 @@
 									<path fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/></svg>
 									<label class="visually-hidden" for="search">Поиск</label>
 								</form>
-								<div class="bookmark">
-									<img class="nav-icon" src="img/icon-bookmark.svg" width="14" height="16" alt="Закладки">
-									<a href="blank.html">Закладки: 0</a>
-								</div>
-								<div class="cart cart-full">
-									<img class="nav-icon" src="img/icon-cart.svg" width="15" height="15" alt="Корзина">
-									<a href="blank.html">Корзина: 0</a>
-								</div>
+								<a href="blank.html" class="bookmark">
+									<img class="nav-icon" src="img/icon-bookmark.svg" width="14" height="16" alt="Закладки">Закладки: 0
+								</a>
+								<a href="blank.html" class="cart cart-full">
+									<img class="nav-icon" src="img/icon-cart.svg" width="15" height="15" alt="Корзина">Корзина: 10
+								</a>
 								<a class="basket-order" href="blank.html">Оформить заказ</a>
 							</div>
 						</div>
@@ -39,21 +37,19 @@
 	    		<div class="container">
 					<div class="navigation-center">
 						<p class="market-description">
-							Интернет-магазин 
-							строительных материалов 
-							и инструментов для ремонта
+							Интернет-магазин строительных материалов<br> и инструментов для ремонта
 						</p>
-						<div class="header-telephone-adress">
+						<div class="header-telephone-adress telephone-catalog">
 							<div class="header-telephone">
 								<img src="img/icon-phone.svg" width="19" height="19" alt="Телефон">
-								<a href="tel:+78125550555">+7(812)555-05-55</a>
+								<a href="tel:+78125550555">+7 (812) 555-05-55</a>
 							</div>
 							<p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
 						</div>
 						<div class="user-account-full">
 							<a href="blank.html" class="user-account">
 								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18"><path fill="#c5c5c5" d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/></svg>
-								Равшан Джамшутович
+								<span class="user-account-name">Равшан Джамшутович</span>
 								<svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17"><g fill="#c5c5c5"><path fill="#c5c5c5" d="M21 8.5L12.125 0v6h-6v5h6v6z"/><path fill="#c5c5c5" d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/></g></svg>
 							</a>
 
@@ -87,7 +83,7 @@
 					</li>
 					<li>
 						<div class="nav-arrow"></div>
-						<a href="blank.html">Инструменты</a>
+						<a href="blank.html">Инструмент</a>
 					</li>
 					<li>
 						<div class="nav-arrow"></div>
@@ -120,7 +116,7 @@
 					</fieldset>
 					<div class="separator separator-1"></div>
 					<fieldset class="fieldset-manufacture">
-						<legend class="h3-filter">Прозводители:</legend>
+						<legend class="h3-filter">Производители:</legend>
 						<ul class="label-checkbox">
 							<li>
 								<input class="visually-hidden input-checkbox" type="checkbox" id="bosch-checkbox" name="bosch" checked>
@@ -163,9 +159,11 @@
 				<div class="catalog-and-sortby">
 					<section class="section-sortby">
 						<h2>Сортировка:</h2>
-						<button class="button-sortby sortby-active" area-label="Сортировка по цене">По цене</button>
-						<button class="button-sortby" area-label="Сортировка по типу">По типу</button>
-						<button class="button-sortby" area-label="Сортировка по функционалу">По функционалу</button>
+						<div class="allbuttons-sortby">
+							<button class="button-sortby sortby-active" area-label="Сортировка по цене">По цене</button>
+							<button class="button-sortby" area-label="Сортировка по типу">По типу</button>
+							<button class="button-sortby" area-label="Сортировка по функционалу">По функционалу</button>
+						</div>
 						<div class="buttons-sortby-updown">
 							<button class="button-sortby-updown sortby-active" area-label="По возрастанию">
 								<svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg>
@@ -260,7 +258,7 @@
 							<h4>
 								Перфоратор BOSCH BFG 2000
 							</h4>
-							<p>12500 Р.</p>
+							<p class="invisible-discount">12500</p>
 							<button class="red-button">12500 Р.</button>
 						</li>
 						<li class="product-card">
@@ -304,7 +302,7 @@
 							<h4>
 								Перфоратор BOSCH BFG 2000
 							</h4>
-							<br>
+							<p class="invisible-discount">12500</p>
 							<button class="red-button">12500 Р.</button>
 						</li>
 					</ul>
@@ -312,7 +310,7 @@
 						<li><a href="blank.html" class="page-button page-active">1</a></li>
 						<li><a href="blank.html" class="page-button">2</a></li>
 						<li><a href="blank.html" class="page-button">3</a></li>
-						<li><a href="blank.html" class="page-button page-next"s>Следующая</a></li>
+						<li><a href="blank.html" class="page-button page-next">Следующая</a></li>
 					</ul>
 				</div>
 			</div>
@@ -322,7 +320,7 @@
 				<section class="fewwords-about">
 					<h2>Пара слов о перфораторах</h2>
 					<p>
-						Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+						Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
 					</p>
 				</section>
 			</div>
@@ -384,7 +382,7 @@
 						</ul>
 						<div class="html-academy-parts">
 							<p class="footer-part2">
-								Обратная связь
+								Обратная связь:
 								<a class="html-academy" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
 							</p>
 							<p class="footer-part3">
