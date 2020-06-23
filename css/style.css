@@ -1740,7 +1740,7 @@ img {
 
 /* index popup */
 
-.popup-form {
+.modal-contacts {
 	position: fixed;
 	width: 620px;
 	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
@@ -1803,7 +1803,7 @@ img {
 	display: block;
 }
 
-.form-login-password {
+.form-login-email {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 13px;
@@ -1918,4 +1918,52 @@ img {
 
 .popupcatalog-buttons button:active {
 	background-color: var(--basic-white);
+}
+
+/* Для скрипта */
+
+.modal-show {
+	display: block;
+	animation: bounce 0.6s;
+}
+
+.modal-error {
+	animation: shake 0.6s;
+}
+
+@keyframes bounce {
+	0% {
+		transform: translateX(2000px);
+	}
+	70% {
+		transform: translateX(-30px);
+	}
+	90% {
+		transform: translateX(10px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes shake {
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70%,
+	90% {
+		transform: translateX(-10px);
+	}
+
+	20%,
+	40%,
+	60%,
+	80% {
+		transform: translateX(10px);
+	}
 }

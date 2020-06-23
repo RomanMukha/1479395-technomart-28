@@ -268,7 +268,7 @@
 								заехав в наш офис:
 							</p>
 							<figure>
-								<a href="">
+								<a class="open-fullmap" href="">
 									<img src="img/map.png" width="300" height="158" alt="Наше расположение">
 								</a>
 							</figure>
@@ -350,28 +350,33 @@
 			<button class="popup-cross" aria-lable="Закрыть"></button>
 			<iframe src="https://yandex.ru/map-widget/v1/-/CCQhAFCToD" width="943" height="442"  allowfullscreen="true" title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
 		</div>
-		<form class="popup-form" action="https://echo.htmlacademy.ru/">
+		<section class="modal-contacts">
 			<div class="popup-top-border"></div>
 			<button class="popup-cross" aria-lable="Закрыть"></button>
-			<div class="form-wrapper">
-				<div class="form-login-password">
-					<div class="login-wrapper">
-						<label class="popup-form-label" for="form-name">Ваше имя:</label>
-						<input type="text" name="form-name" id="form-name" placeholder="Имя Фамилия" required>
+			<form class="popup-form" action="https://echo.htmlacademy.ru/">
+				<div class="form-wrapper">
+					<div class="form-login-email">
+						<div class="login-wrapper">
+							<label class="popup-form-label" for="form-name">Ваше имя:</label>
+							<input class="form-login-input" type="text" name="form-name" id="form-name" placeholder="Имя Фамилия">
+						</div>
+						<div div class="email-wrapper">
+							<label class="popup-form-label" for="form-email">Ваш e-mail:</label>
+							<input class="form-email-input" type="email" name="form-email" id="form-email" placeholder="email@example.com">
+						</div>
 					</div>
-					<div div class="email-wrapper">
-						<label class="popup-form-label" for="form-email">Ваш e-mail:</label>
-						<input type="email" name="form-email" id="form-email" placeholder="email@example.com" required>
+					<div>
+						<label class="popup-form-label" for="form-text">Текст письма:</label>
+						<textarea class="form-text-input" name="form-text" id="form-text" cols="60" rows="5" placeholder="В свободной форме"></textarea>
 					</div>
 				</div>
-				<div>
-					<label class="popup-form-label" for="form-text">Текст письма:</label>
-					<textarea name="form-text" id="form-text" cols="60" rows="5" placeholder="В свободной форме" required></textarea>
+				<div class="popup-form-bottom">
+					<button type="submit" class="index-red-button popup-submit-button" aria-lable="Отправить">Отправить</button>
 				</div>
-			</div>
-			<div class="popup-form-bottom">
-				<button type="submit" class="index-red-button popup-submit-button" aria-lable="Отправить">Отправить</button>
-			</div>
-		</form>
+			</form>
+		</section>
+
+		<script src="js/mainmodal.js"></script>
+
 	</body>
 </html>
