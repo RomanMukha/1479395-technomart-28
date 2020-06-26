@@ -473,10 +473,12 @@ img {
 	width: 620px;
 	height: 104px;
 	left: 0px;
+
+	display: none;
 }
 
-.big-slide-title-drill {
-	display: none;
+.big-slide-active {
+	display: block;
 }
 
 .big-slide-title h2 {
@@ -575,6 +577,7 @@ img {
 	cursor: pointer;
 	border: 2px solid var(--basic-white);
 	border-radius: 50%;
+	outline: none;
 }
 
 .bigslide-dot.bigslide-dot-active {
@@ -619,6 +622,10 @@ img {
 
 .page-body-main .product-card:nth-child(1) .perforator-img {
 	margin: 0px;
+}
+
+.page-body-main .product-card:nth-child(3) {
+	margin-left: 2px;
 }
 
 .popular-vendors {
@@ -767,11 +774,11 @@ img {
 	height: 283px;
 	margin-top: 35px;
 	display: none;
+	align-self: flex-end;
 }
 
 .services-category.services-active {
 	display: block;
-	align-self: flex-end;
 }
 
 .services-category.services-category-delivery {
@@ -1266,11 +1273,6 @@ img {
 	border-radius: 5px;
 }
 
-/* .price-controls input::-webkit-outer-spin-button,
-.price-controls input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;} */
-
 /* Ценовой фильтр - конец */
 
 .section-sortby {
@@ -1509,9 +1511,7 @@ img {
 	margin-right: 19px;
 	margin-bottom: 18px;
 	padding: 6px 18px 21px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	text-align: center;
 }
 
 .invisible-discount {
@@ -1536,13 +1536,14 @@ img {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 5px;
 }
 
 .buy-popup {
 	display: none;
-	margin-bottom: 54px;
-	margin-top: 16px;
+	text-align: center;
+	margin-bottom: 18px;
+	padding-right: 3px;
+    padding-top: 2px;
 }
 
 .product-card .new-img {
@@ -1558,12 +1559,6 @@ img {
 
 .product-card:hover {
 	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-}
-
-.buy-popup {
-	display: none;
-	margin: auto;
-	text-align: center;
 }
 
 .product-card:hover .buy-popup {
@@ -1583,8 +1578,7 @@ img {
 	padding: 0;
 	margin: 0;
 	text-align: center;
-	margin-top: 4px;
-	margin-bottom: auto;
+	margin-top: 7px;
 }
 
 .product-card p {
@@ -1597,6 +1591,7 @@ img {
 	text-transform: uppercase;
 	margin: 0;
 	padding: 0;
+	margin-top: 10px;
 }
 
 .red-button {
@@ -1609,9 +1604,7 @@ img {
 	color: var(--basic-white);
 	text-transform: uppercase;
 	background: url(../img/red-button.svg) no-repeat;
-	border: none;
-	outline: none;
-	margin-left: 11px;
+	margin-left: 27px;
 	margin-top: 12px;
 	padding-left: 0px;
 }
@@ -1626,14 +1619,19 @@ img {
 	border-radius: 2px;
 	box-shadow: inset 0px -3px 0px #367315;
 	margin: 0;
-	padding: 10px;
+	padding: 0;
+	padding-top: 11px;
+	padding-right: 30px;
+	padding-bottom: 9px;
 	width: 135px;
 	margin-bottom: 10px;
 	outline: none;
 }
 
 .buy-button img {
-	margin-right: 10px;
+	float: left;
+	margin-left: 28px;
+	opacity: 0.3;
 }
 
 .buy-button:hover {
@@ -1653,7 +1651,9 @@ img {
 	background-color: var(--basic-white);
 	border-radius: 2px;
 	margin: 0;
-	padding: 10px;
+	padding: 0;
+	padding-top: 8px;
+	padding-bottom: 6px;
 	width: 135px;
 	outline: none;
 }
