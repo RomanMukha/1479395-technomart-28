@@ -5,7 +5,8 @@ var binCloseAlt = binPopup.querySelector(".popupbutton-close");
 
 
 buyButton.forEach(buyButton => { 
-	buyButton.addEventListener("click", function() {
+	buyButton.addEventListener("click", function(evt) {
+		evt.preventDefault();
 		binPopup.classList.add("modal-show");
 	});
 });

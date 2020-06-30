@@ -5,7 +5,7 @@
 		<title>HTML Academy: Техномарт</title>
 		<link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 		<link href="css/normalize.css" rel="stylesheet">
-		<link href="css/stylemin.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
 	</head>
 	<body class="page-body">
 	<header class="header">
@@ -47,12 +47,15 @@
 							<p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
 						</div>
 						<div class="user-account-full">
-							<a href="blank.html" class="user-account">
+							<div class="user-account">
+								<a href="blank.html" class="user-account-in">
 								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18"><path fill="#c5c5c5" d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/></svg>
 								<span class="user-account-name">Равшан Джамшутович</span>
-								<svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17"><g fill="#c5c5c5"><path fill="#c5c5c5" d="M21 8.5L12.125 0v6h-6v5h6v6z"/><path fill="#c5c5c5" d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/></g></svg>
-							</a>
-
+								</a>
+								<a href="blank.html" class="user-account-out">
+									<svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17"><g fill="#c5c5c5"><path fill="#c5c5c5" d="M21 8.5L12.125 0v6h-6v5h6v6z"/><path fill="#c5c5c5" d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/></g></svg>
+								</a>
+							</div>
 							<div class="sub-user-account">
 								<a href="blank.html">Мои заказы</a>
 								<div class="dot"></div>
@@ -160,17 +163,17 @@
 					<section class="section-sortby">
 						<h2>Сортировка:</h2>
 						<div class="allbuttons-sortby">
-							<button class="button-sortby sortby-active" aria-label="Сортировка по цене">По цене</button>
-							<button class="button-sortby" aria-label="Сортировка по типу">По типу</button>
-							<button class="button-sortby" aria-label="Сортировка по функционалу">По функционалу</button>
+							<a href="blank.html" class="button-sortby sortby-active">По цене</a>
+							<a href="blank.html" class="button-sortby">По типу</a>
+							<a href="blank.html" class="button-sortby">По функционалу</a>
 						</div>
 						<div class="buttons-sortby-updown">
-							<button class="button-sortby-updown sortby-active" aria-label="По возрастанию">
+							<a href="blank.html" class="button-sortby-updown sortby-active">
 								<svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg>
-							</button>
-							<button class="button-sortby-updown" aria-label="По убыванию">
+							</a>
+							<a href="blank.html" class="button-sortby-updown">
 								<svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg>
-							</button>
+							</a>
 						</div>
 					</section>
 					<ul class="product-cards-catalog product-cards-inner">
@@ -178,7 +181,7 @@
 							<div class="card-img-wrapper">
 								<img class="perforator-img" src="img/bosch6k.jpg" width="144" height="128" alt="Перфоратор">
 								<div class="buy-popup">
-									<button class="buy-button" aria-label="Положить в корзину"><img src="img/icon-cart.svg" width="15" height="15" alt="В корзину">Купить</button>
+									<a href="blank.html" class="buy-button">Купить</a>
 									<button class="bookmark-button" aria-label="Добавить в закладки">В закладки</button>
 								</div>
 							</div>
@@ -192,7 +195,7 @@
 							<div class="card-img-wrapper">
 								<img class="perforator-img" src="img/bosch6k.jpg" width="144" height="128" alt="Перфоратор">
 								<div class="buy-popup">
-									<button class="buy-button" aria-label="Положить в корзину"><img src="img/icon-cart.svg" width="15" height="15" alt="В корзину">Купить</button>
+									<a href="blank.html" class="buy-button">Купить</a>
 									<button class="bookmark-button" aria-label="Добавить в закладки">В закладки</button>
 								</div>
 							</div>
@@ -207,7 +210,7 @@
 							<div class="card-img-wrapper">
 								<img class="perforator-img" src="img/bosch6k.jpg" width="144" height="128" alt="Перфоратор">
 								<div class="buy-popup">
-									<button class="buy-button" aria-label="Положить в корзину"><img src="img/icon-cart.svg" width="15" height="15" alt="В корзину">Купить</button>
+									<a href="blank.html" class="buy-button">Купить</a>
 									<button class="bookmark-button" aria-label="Добавить в закладки">В закладки</button>
 								</div>
 							</div>
@@ -222,7 +225,7 @@
 							<div class="card-img-wrapper">
 								<img class="perforator-img" src="img/bosch2k3k.jpg" width="127" height="112" alt="Перфоратор">
 								<div class="buy-popup">
-									<button class="buy-button" aria-label="Положить в корзину"><img src="img/icon-cart.svg" width="15" height="15" alt="В корзину">Купить</button>
+									<a href="blank.html" class="buy-button">Купить</a>
 									<button class="bookmark-button" aria-label="Добавить в закладки">В закладки</button>
 								</div>
 							</div>
@@ -236,7 +239,7 @@
 							<div class="card-img-wrapper">
 								<img class="perforator-img" src="img/bosch6k.jpg" width="144" height="128" alt="Перфоратор">
 								<div class="buy-popup">
-									<button class="buy-button" aria-label="Положить в корзину"><img src="img/icon-cart.svg" width="15" height="15" alt="В корзину">Купить</button>
+									<a href="blank.html" class="buy-button">Купить</a>
 									<button class="bookmark-button" aria-label="Добавить в закладки">В закладки</button>
 								</div>
 							</div>
@@ -251,7 +254,7 @@
 							<div class="card-img-wrapper">
 								<img class="perforator-img" src="img/bosch2k3k.jpg" width="127" height="112" alt="Перфоратор">
 								<div class="buy-popup">
-									<button class="buy-button" aria-label="Положить в корзину"><img src="img/icon-cart.svg" width="15" height="15" alt="В корзину">Купить</button>
+									<a href="blank.html" class="buy-button">Купить</a>
 									<button class="bookmark-button" aria-label="Добавить в закладки">В закладки</button>
 								</div>
 							</div>
@@ -266,7 +269,7 @@
 							<div class="card-img-wrapper">
 								<img class="perforator-img" src="img/bosch2k3k.jpg" width="127" height="112" alt="Перфоратор">
 								<div class="buy-popup">
-									<button class="buy-button" aria-label="Положить в корзину"><img src="img/icon-cart.svg" width="15" height="15" alt="В корзину">Купить</button>
+									<a href="blank.html" class="buy-button">Купить</a>
 									<button class="bookmark-button" aria-label="Добавить в закладки">В закладки</button>
 								</div>
 							</div>
@@ -280,7 +283,7 @@
 							<div class="card-img-wrapper">
 								<img class="perforator-img" src="img/bosch6k.jpg" width="144" height="128" alt="Перфоратор">
 								<div class="buy-popup">
-									<button class="buy-button" aria-label="Положить в корзину"><img src="img/icon-cart.svg" width="15" height="15" alt="В корзину">Купить</button>
+									<a href="blank.html" class="buy-button">Купить</a>
 									<button class="bookmark-button" aria-label="Добавить в закладки">В закладки</button>
 								</div>
 							</div>
@@ -295,7 +298,7 @@
 							<div class="card-img-wrapper">
 								<img class="perforator-img" src="img/bosch2k3k.jpg" width="127" height="112" alt="Перфоратор">
 								<div class="buy-popup">
-									<button class="buy-button" aria-label="Положить в корзину"><img src="img/icon-cart.svg" width="15" height="15" alt="В корзину">Купить</button>
+									<a href="blank.html" class="buy-button">Купить</a>
 									<button class="bookmark-button" aria-label="Добавить в закладки">В закладки</button>
 								</div>
 							</div>
@@ -365,19 +368,13 @@
 						</p>
 						<ul class="social-icons-ul">
 							<li>
-								<a href="#" class="social-icons">
-									<img src="img/icon-vk.svg" width="25" height="14" alt="Вконтакте">
-								</a>
+								<a href="#" class="social-icons social-icons-vk"></a>
 							</li>
 							<li>
-								<a href="#" class="social-icons">
-									<img src="img/icon-fb.svg" width="12" height="22" alt="facebook">
-								</a>
+								<a href="#" class="social-icons social-icons-fb"></a>
 							</li>
 							<li>
-								<a href="#" class="social-icons">
-									<img src="img/icon-insta.svg" width="21" height="21" alt="Instagram">
-								</a>
+								<a href="#" class="social-icons social-icons-insta"></a>
 							</li>
 						</ul>
 						<div class="html-academy-parts">
@@ -408,7 +405,7 @@
 		</div>
 	</div>
 
-	<script src="js/catalogmin.js"></script>
+	<script src="js/catalogmodal.js"></script>
 
 	</body>
 </html>

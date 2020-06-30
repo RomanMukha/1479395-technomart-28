@@ -5,7 +5,7 @@
 		<title>HTML Academy: Техномарт</title>
 		<link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 		<link href="css/normalize.css" rel="stylesheet">
-		<link href="css/stylemin.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
 	</head>
 	<body class="page-body page-body-main">
 		<header class="header">
@@ -69,26 +69,26 @@
 			<div class="container">
 				<div class="grid-category">
 					<div class="category-materials category-cards">
-						<img class="new-on-category" src="img/new.svg" width="70" height="70" alt="New">
-						<div>
+						<div class="new-on-category"></div>
+						<div class="category-h3andtext">
 							<h3 class="h3-cards">Материалы</h3>
 							<a class="category-text" href="blank.html">На любой вкус</a>
 						</div>
-						<img src="img/icon-1.svg" width="44" height="65" alt="Материалы">
+						<div class="category-materials-icon"></div>
 					</div>
 					<div class="category-instruments category-cards">
 						<div>
 							<h3 class="h3-cards">Инструмент</h3>
 							<a class="category-text" href="blank.html">На все случаи</a>
 						</div>
-						<img src="img/icon-2.svg" width="75" height="61" alt="Инструменты">
+						<div class="category-instruments-icon"></div>
 					</div>
 					<div class="category-construction category-cards">
 						<div>
 							<h3 class="h3-cards">Техника</h3>
 							<a class="category-text" href="blank.html">Для стройки</a>
 						</div>
-						<img src="img/icon-3.svg" width="78" height="62" alt="Техника">
+						<div class="category-construction-icon"></div>
 					</div>
 					<article class="big-slide perforator-background">
 						<div class="big-slide-title big-slide-title-perfo big-slide-active">
@@ -111,17 +111,17 @@
 					</article>
 					<div class="category-discount category-cards">
 						<div>
-							<h3 class="h3-cards">Скидки 50%</h3>
+							<h3 class="h3-cards h3-cards-discount">Скидки 50%</h3>
 							<a class="category-text" href="blank.html">На 350 товаров</a>
 						</div>
-						<img src="img/icon-4.svg" width="59" height="72" alt="Корзина">
+						<div class="category-discount-icon"></div>
 					</div>
 					<div class="category-delivery category-cards">
 						<div>
 							<h3 class="h3-cards">Доставка</h3>
 							<a class="category-text" href="blank.html">Бесплатно</a>
 						</div>
-						<img src="img/icon-5.svg" width="78" height="63" alt="Доставка">
+						<div class="category-delivery-icon"></div>
 					</div>
 				</div>
 				<section>
@@ -134,7 +134,7 @@
 							<div class="card-img-wrapper">
 								<img class="perforator-img" src="img/bosch9k.jpg" width="184" height="164" alt="Перфоратор">
 								<div class="buy-popup">
-									<button class="buy-button" aria-label="Положить в корзину"><img src="img/icon-cart.svg" width="15" height="15" alt="В корзину">Купить</button>
+									<a href="blank.html" class="buy-button">Купить</a>
 									<button class="bookmark-button" aria-label="Добавить в закладки">В закладки</button>
 								</div>
 							</div>
@@ -147,7 +147,7 @@
 							<div class="card-img-wrapper">
 								<img class="perforator-img" src="img/bosch2k3k.jpg" width="127" height="112" alt="Перфоратор">
 								<div class="buy-popup">
-									<button class="buy-button" aria-label="Положить в корзину"><img src="img/icon-cart.svg" width="15" height="15" alt="В корзину">Купить</button>
+									<a href="blank.html" class="buy-button">Купить</a>
 									<button class="bookmark-button" aria-label="Добавить в закладки">В закладки</button>
 								</div>
 							</div>
@@ -159,7 +159,7 @@
 							<div class="card-img-wrapper">
 								<img class="perforator-img" src="img/bosch6k.jpg" width="144" height="128" alt="Перфоратор">
 								<div class="buy-popup">
-									<button class="buy-button" aria-label="Положить в корзину"><img src="img/icon-cart.svg" width="15" height="15" alt="В корзину">Купить</button>
+									<a href="blank.html" class="buy-button">Купить</a>
 									<button class="bookmark-button" aria-label="Добавить в закладки">В закладки</button>
 								</div>
 							</div>
@@ -172,7 +172,7 @@
 							<div class="card-img-wrapper">
 								<img class="perforator-img" src="img/bosch2k3k.jpg" width="127" height="112" alt="Перфоратор">
 								<div class="buy-popup">
-									<button class="buy-button" aria-label="Положить в корзину"><img src="img/icon-cart.svg" width="15" height="15" alt="В корзину">Купить</button>
+									<a href="blank.html" class="buy-button">Купить</a>
 									<button class="bookmark-button" aria-label="Добавить в закладки">В закладки</button>
 								</div>
 							</div>
@@ -214,7 +214,6 @@
 									<li><button class="services-switch services-switch-guarantee" aria-label="О гарантиях">Гарантия</button></li>
 									<li><button class="services-switch services-switch-credit" aria-label="О кредите">Кредит</button></li>
 								</ul>
-								<div class="switcher-rightborder"></div>
 							</div>
 							<div class="services-category services-category-delivery services-active">
 								<h3 class="h3-services">Доставка</h3>
@@ -316,19 +315,13 @@
 							</p>
 							<ul class="social-icons-ul">
 								<li>
-									<a href="#" class="social-icons">
-										<img src="img/icon-vk.svg" width="25" height="14" alt="Вконтакте">
-									</a>
+									<a href="#" class="social-icons social-icons-vk"></a>
 								</li>
 								<li>
-									<a href="#" class="social-icons">
-										<img src="img/icon-fb.svg" width="12" height="22" alt="facebook">
-									</a>
+									<a href="#" class="social-icons social-icons-fb"></a>
 								</li>
 								<li>
-									<a href="#" class="social-icons">
-										<img src="img/icon-insta.svg" width="21" height="21" alt="Instagram">
-									</a>
+									<a href="#" class="social-icons social-icons-insta"></a>
 								</li>
 							</ul>
 							<div class="html-academy-parts">
