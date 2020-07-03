@@ -8,6 +8,7 @@ buyButton.forEach(buyButton => {
 	buyButton.addEventListener("click", function(evt) {
 		evt.preventDefault();
 		binPopup.classList.add("modal-show");
+		binCloseAlt.focus();
 	});
 });
 
