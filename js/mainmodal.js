@@ -118,7 +118,30 @@ slideButton.forEach(slideButton => {
 	});
 });
 
-slideDot.forEach(slideDot => {
+
+slideDotOne.addEventListener("click", function() {
+	if (slideBg.classList.contains("perforator-background")) {
+		slideBg.classList.remove("perforator-background");
+		slideBg.classList.add("drill-background");
+		slideDotTwo.classList.remove("bigslide-dot-active");
+		slideDotOne.classList.add("bigslide-dot-active");
+		slideTitlePerfo.classList.remove("big-slide-active");
+		slideTitleDrill.classList.add("big-slide-active");	
+	}
+});
+
+slideDotTwo.addEventListener("click", function() {
+	if (slideBg.classList.contains("drill-background")) {
+		slideBg.classList.remove("drill-background");
+		slideBg.classList.add("perforator-background");
+		slideDotOne.classList.remove("bigslide-dot-active");
+		slideDotTwo.classList.add("bigslide-dot-active");
+		slideTitlePerfo.classList.add("big-slide-active");
+		slideTitleDrill.classList.remove("big-slide-active");	
+	}
+});
+
+/*slideDot.forEach(slideDot => {
 	slideDot.addEventListener("click", function() {
 		if (slideBg.classList.contains("perforator-background")) {
 			slideBg.classList.remove("perforator-background");
@@ -137,7 +160,7 @@ slideDot.forEach(slideDot => {
 			slideTitlePerfo.classList.add("big-slide-active");
 		}
 	});
-});
+});*/
 
 
 serviceSwitchDelivery.addEventListener("click", function() {
